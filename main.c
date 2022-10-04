@@ -1,24 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 #include "pilha.h"
 
-float operacao(float a, float b, char x){
-    switch (x) {
-        case '+':
-            return a + b;
-        case '-':
-            return a - b;
-        case '*':
-            return a * b;
-        case '/':
-            return a / b;
-        default:
-            return 0;
-    }
-}
-
 int main() {
-
+    char expressao[50] = "50 150 +";
+    printf("\nInsira a expressão:\n");
+    scanf("%49[ˆ\n]", &expressao[0]);
+    printf("%s\n", expressao);
+    printf("Resultado de %s:\t%f\n", expressao, resolver(expressao));
     return 0;
 }
