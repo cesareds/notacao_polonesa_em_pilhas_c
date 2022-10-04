@@ -8,6 +8,7 @@ int main() {
     printf("\nInsira a expressão:\n");
     scanf("%49[ˆ\n]", &expressao[0]);
     printf("%s\n", expressao);
-    printf("Resultado de %s:\t%f\n", expressao, resolver(expressao));
+    printf("Resultado de %s :\t", expressao);
+    printf("%f\n", resolver(expressao));
     return 0;
 }

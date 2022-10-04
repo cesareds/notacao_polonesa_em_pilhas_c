@@ -51,7 +51,7 @@ float resolver(char x[]){ // "51 13 12 * +"
         if(p[0]=='+'||p[0]=='-'||p[0]=='*'||p[0]=='/'){
             no1 = desempilhar(&pilha);
             no2 = desempilhar(&pilha);
-            num = operation(no1->x, no2->x, p[0]);
+            num = operation(no2->x, no1->x, p[0]);
             pilha = empilhar(pilha, num);
             free(no1);
             free(no2);
